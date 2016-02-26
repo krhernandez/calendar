@@ -3,6 +3,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css/basicStyle.css" rel="stylesheet">
         <title>CALENDAR</title>
     </head>
     <body>
