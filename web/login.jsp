@@ -10,9 +10,11 @@
         <%@include file="WEB-INF/jspf/banner.jspf" %>
         <div>Enter your login & password</div>
         <form action="j_security_check" method="POST">
-            <label>User: </label><input type="text" name="j_username" value="" /><br>
-            <label>Password: </label><input type="password" name="j_password" value="" /><br>
-            <input type="submit" value="Login" />
+            <table id="loginTable">
+                <tr><td><label>User: </label></td><td><input type="text" name="j_username" value="" /></td></tr>
+                <tr><td><label>Password: </label></td><td><input type="password" name="j_password" value="" /></td></tr>
+                <tr><td colspan="2"><input type="submit" value="Login" /></td></tr>
+            </table>
         </form>
     </body>
 </html>

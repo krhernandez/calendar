@@ -4,22 +4,59 @@ body{
 
 form {
     display: block;
-    width: 700px;
+    width: 500px;
     border: 2px black solid;
     border-radius: 10px;
     box-shadow: 3px 3px 3px black;
     background-color: white;
     padding: 10px;
     margin: auto;
+    text-align: center;
+}
+
+#loginTable{    
+    width: auto;
+    padding: 10px;
+    margin: auto;
+}
+
+#selectMonth{
+    width: auto;
+    padding: 10px;
+    margin: auto;
+}
+
+#tableMonth thead{
+    background: #cc0033;
+}
+
+#tableMonth{
+    width: 100%;
+}
+
+select option{
+    text-align: left;
+}
+
+div{
+    display: block;
+    width: 500px;
+    border: 2px black solid;
+    border-radius: 10px;
+    box-shadow: 3px 3px 3px black;
+    background-color: white;
+    padding: 10px;
+    margin: auto;
+    text-align: center;
 }
 
 label{
-    font-size: 12px;
+    font-size: 14px;
+    margin: 5px;
 }
 
 input{
     border: 1px solid #ccc;
-    margin-bottom: 20px;
 }
 
 input:focus{
@@ -31,6 +68,7 @@ input[type="submit"]{
     background: #1668C4;
     color: #fff;
     border: none;
+    width: 100%;
 }
 
 input[type="submit"]:hover{
