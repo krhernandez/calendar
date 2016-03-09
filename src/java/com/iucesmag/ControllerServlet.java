@@ -43,7 +43,7 @@ public class ControllerServlet extends HttpServlet {
 //            out.println(request.getParameter("lstMonth"));
 //        }
         ServletData servletData = new ServletData();
-        servletData.setMonth(request.getParameter("lstMonth"));        
+        servletData.setMonth(request.getParameter("lstMonth"));
         request.setAttribute("servletData", servletData);
         request.getRequestDispatcher("calendar.jsp").forward(request, response);
 

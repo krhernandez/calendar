@@ -20,80 +20,56 @@
                 </thead>
                 <tbody>
                     <% int x = 1; %>
-                <c:choose>
-                    <c:when test="${servletData.month == 'February'}">
-                        <%  
-                            while(x<=29){
-                            int c = 0;                        
-                        %>
-                            <tr>
-                        <%    
-                            while(c < 7 && x <=29 ){
-                        %>
-                            <td>
-                        <%
-                            out.println(String.valueOf(x));
-                            x++;
-                        %>
-                            </td>
-                        <%
-                                c++;
-                            }                    
-                        %>
-                            </tr>
-                        <%
-                            }
-                        %>
-                    </c:when>
-                    <c:when test="${servletData.month == 'April' || servletData.month == 'June' || servletData.month == 'September' || servletData.month == 'November' }">
-                        <%  
-                            while(x<=30){
-                            int c = 0;                        
-                        %>
-                            <tr>
-                        <%    
-                            while(c < 7 && x <=30 ){
-                        %>
-                            <td>
-                        <%
-                            out.println(String.valueOf(x));
-                            x++;
-                        %>
-                            </td>
-                        <%
-                                c++;
-                            }                    
-                        %>
-                            </tr>
-                        <%
-                            }
-                        %>
-                    </c:when>
-                    <c:otherwise>
-                        <%  
-                            while(x<=31){
-                            int c = 0;                        
-                        %>
-                            <tr>
-                        <%    
-                            while(c < 7 && x <=31 ){
-                        %>
-                            <td>
-                        <%
-                            out.println(String.valueOf(x));
-                            x++;
-                        %>
-                            </td>
-                        <%
-                                c++;
-                            }                    
-                        %>
-                            </tr>
-                        <%
-                            }
-                        %>
-                    </c:otherwise>
-                </c:choose> 
+                    <c:choose>
+                        <c:when test="${servletData.month == 'February'}">
+                            <%
+                                while (x <= 29) {
+                                    int c = 0;
+                                    out.println("<tr>");
+                                    while (c < 7 && x <= 29) {
+                                        out.println("<td>");
+                                        out.println(String.valueOf(x));
+                                        x++;
+                                        out.println("</td>");
+                                        c++;
+                                    }
+                                    out.println("</tr>");
+                                }
+                            %>
+                        </c:when>
+                        <c:when test="${servletData.month == 'April' || servletData.month == 'June' || servletData.month == 'September' || servletData.month == 'November' }">
+                            <%
+                                while (x <= 30) {
+                                    int c = 0;
+                                    out.println("<tr>");
+                                    while (c < 7 && x <= 30) {
+                                        out.println("<td>");
+                                        out.println(String.valueOf(x));
+                                        x++;
+                                        out.println("</td>");
+                                        c++;
+                                    }
+                                    out.println("</tr>");
+                                }
+                            %>
+                        </c:when>
+                        <c:otherwise>
+                            <%
+                                while (x <= 31) {
+                                    int c = 0;
+                                    out.println("<tr>");
+                                    while (c < 7 && x <= 31) {
+                                        out.println("<td>");
+                                        out.println(String.valueOf(x));
+                                        x++;
+                                        out.println("</td>");
+                                        c++;
+                                    }
+                                    out.println("</tr>");
+                                }
+                            %>
+                        </c:otherwise>
+                    </c:choose> 
                 </tbody>
             </table>
         </div>
